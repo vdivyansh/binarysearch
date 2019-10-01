@@ -8,7 +8,7 @@ class binary
 		if(a[mid]==src){
 			return true;
 		}
-		else if(a[mid]>src)
+		else if(a[mid]>=src)
 			return binarysrc(a,l,mid+1,src);
 		else
 			return binarysrc(a,mid+1,h,src);
