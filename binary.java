@@ -3,15 +3,15 @@ class binary
 {
 	public static boolean binarysrc(int a[],int l,int h,int src)
 	{
-		if(h>=l){
+		while(h>=l){
 		int mid =l+((h-l)/2);
 		if(a[mid]==src){
 			return true;
 		}
 		else if(a[mid]>=src)
-			return binarysrc(a,l,mid+1,src);
+			h=mid-1;
 		else
-			return binarysrc(a,mid+1,h,src);
+			l=mid+1;
 	}
 		return false;
 	}
